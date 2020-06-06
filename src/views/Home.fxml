@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1092.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <ImageView fitHeight="725.0" fitWidth="1092.0" opacity="0.34" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../uploads/unsplash.jpg" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="725.0" prefWidth="263.0">
+         <children>
+            <JFXButton fx:id="btnTransportHome" buttonType="RAISED" layoutY="348.0" onAction="#listLigne" prefHeight="66.0" prefWidth="263.0" ripplerFill="#d388cc" style="-fx-background-color: white;" text="Transport">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></JFXButton>
+         </children>
+      </Pane>
+      <Pane fx:id="mainPaneHome" layoutX="263.0" prefHeight="725.0" prefWidth="828.0" />
+   </children>
+</AnchorPane>

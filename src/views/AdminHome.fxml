@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1092.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminHomeController">
+   <children>
+      <Pane prefHeight="725.0" prefWidth="263.0" style="-fx-background-color: pink;">
+         <children>
+            <JFXButton fx:id="btnTransport" buttonType="RAISED" layoutY="423.0" onAction="#OnTransportAction" prefHeight="66.0" prefWidth="263.0" ripplerFill="#d388cc" style="-fx-background-color: white;" text="Transport">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+         </children>
+      </Pane>
+      <Pane fx:id="mainPane" layoutX="263.0" prefHeight="725.0" prefWidth="828.0" />
+   </children>
+</AnchorPane>

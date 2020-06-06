@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="lib2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/run1477601918/lib/zxing-core-2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/run1477601918/lib/mysql-connector-java-5.1.23-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/run1477601918/lib/jfoenix-8.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/run1477601918/lib/javax.mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/run1477601918/lib/fontawesomefx-8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/run1477601918/lib/controlsfx-8.40.14.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
