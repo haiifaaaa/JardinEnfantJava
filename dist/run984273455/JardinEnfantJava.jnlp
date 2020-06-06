@@ -19,6 +19,6 @@
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="JardinEnfantJava" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="jardinenfantjava.JardinEnfantJava"  name="JardinEnfantJava" />
+  <jfx:javafx-desc width="800" height="600" main-class="main.JardinEnfantJava" name="JardinEnfantJava" />
   <update check="always"/>
 </jnlp>
