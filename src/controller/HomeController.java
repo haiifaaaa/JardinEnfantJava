@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -28,6 +29,9 @@ public class HomeController implements Initializable {
 
     @FXML
     private JFXButton btnTransportHome;
+    
+    @FXML
+    private JFXButton btnRestoHome;
       
    
     
@@ -47,7 +51,20 @@ public class HomeController implements Initializable {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/views/TransportFront.fxml"));
         mainPaneHome.getChildren().setAll(pane);
     }
+
+    @FXML
+    private void pageresto(ActionEvent event) throws IOException {
+        
+        btnRestoHome.setStyle("-fx-background-color: #d388cc;");
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/views/Resto.fxml"));
+        mainPaneHome.getChildren().setAll(pane);
+                
+        
+      
+        //mainPaneHome.getChildren().setAll(pane);
+    }
    
+    
     
     
 }

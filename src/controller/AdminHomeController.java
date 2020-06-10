@@ -28,14 +28,26 @@ public class AdminHomeController implements Initializable {
 
     @FXML
     private Pane mainPane;
+    @FXML
+    private JFXButton btnRestaurant;
+    FXMLLoader loader = new FXMLLoader();
 
     @FXML
     void OnTransportAction(ActionEvent event) throws IOException {
         btnTransport.setStyle("-fx-background-color: #d388cc;");
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/views/Transport.fxml"));
         mainPane.getChildren().setAll(pane);
-
     }
+        
+    @FXML
+    void OnRestoAction(ActionEvent event) throws IOException {
+        btnRestaurant.setStyle("-fx-background-color: #d388cc;");
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/views/Resto.fxml"));
+        //Pane root = loader.load(getClass().getResource("/views/Resto.fxml").openStream());
+         //button.setDisable(true);
+      
+    }
+    
     /**
      * Initializes the controller class.
      */
