@@ -45,7 +45,7 @@ public class AdminHomeController implements Initializable {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/views/Resto.fxml"));
         //Pane root = loader.load(getClass().getResource("/views/Resto.fxml").openStream());
          //button.setDisable(true);
-      
+      //test
     }
     
     /**
