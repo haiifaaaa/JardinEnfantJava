@@ -97,6 +97,8 @@ public class RestoController implements Initializable {
     private TableColumn<?, ?> type;
     @FXML
     private TableColumn<?, ?> statut;
+    @FXML
+    private JFXTextField idTxt;
 
     /**
      * Initializes the controller class.
@@ -108,7 +110,7 @@ public class RestoController implements Initializable {
     
     RestoService ps = new RestoService();
     public ObservableList<Resto> list = FXCollections.observableArrayList(
-           // ps.afficher()
+           /* ps.afficher()*/
     );
 
      public void showNotif(){
@@ -132,7 +134,7 @@ public class RestoController implements Initializable {
      }
      
       boolean validateFieldsResto(){
-        if(nomTxt.getText().isEmpty()||descriptionTxt.getText().isEmpty()||AdresseTxt.getText().isEmpty() ||NombredeplaceTxt.getText().isEmpty()){
+        if( idTxt.getText().isEmpty() || nomTxt.getText().isEmpty()||descriptionTxt.getText().isEmpty()||AdresseTxt.getText().isEmpty() ||NombredeplaceTxt.getText().isEmpty()){
         showNotif();
         return false;}
         
@@ -145,9 +147,10 @@ public class RestoController implements Initializable {
         
         if(validateFieldsResto()){
         int nbr = Integer.parseInt(NombredeplaceTxt.getText());
-        Resto c = new Resto(nomTxt.getText(), descriptionTxt.getText(), AdresseTxt.getText(), NombredeplaceTxt);
+        int id = Integer.parseInt(idTxt.getText());
+        Resto c = new Resto(id,nomTxt.getText(), descriptionTxt.getText(), AdresseTxt.getText(), nbr);
         RestoService sc = new RestoService();
-       // sc.ajouter(c);
+        sc.ajouter(c);
         /**
          * refreshing the table view *
          */
