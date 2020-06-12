@@ -11,6 +11,7 @@ import entities.Resto;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -23,6 +24,7 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 import services.ChauffeurService;
+import services.RestoService;
 
 /**
  * FXML Controller class
@@ -45,12 +47,6 @@ public class RestoController implements Initializable {
     private TableView<?> tableRestaurant;
     @FXML
     private TableColumn<?, ?> nom;
-    @FXML
-    private TableColumn<?, ?> prenom;
-    @FXML
-    private TableColumn<?, ?> cin;
-    @FXML
-    private TableColumn<?, ?> Prix;
     @FXML
     private JFXTextField prixTxt;
     @FXML
@@ -81,6 +77,26 @@ public class RestoController implements Initializable {
     private DatePicker datedebut;
     @FXML
     private JFXTextField marqueTxt;
+    @FXML
+    private TableColumn<?, ?> id;
+    @FXML
+    private TableColumn<?, ?> description;
+    @FXML
+    private TableColumn<?, ?> adresse;
+    @FXML
+    private TableColumn<?, ?> nbplace;
+    @FXML
+    private JFXTextField search1;
+    @FXML
+    private TableView<?> tablePlat1;
+    @FXML
+    private TableColumn<?, ?> num;
+    @FXML
+    private TableColumn<?, ?> objet;
+    @FXML
+    private TableColumn<?, ?> type;
+    @FXML
+    private TableColumn<?, ?> statut;
 
     /**
      * Initializes the controller class.
@@ -89,6 +105,11 @@ public class RestoController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    RestoService ps = new RestoService();
+    public ObservableList<Resto> list = FXCollections.observableArrayList(
+           // ps.afficher()
+    );
 
      public void showNotif(){
          Image img = new Image("/uploads/error.png");
@@ -122,23 +143,23 @@ public class RestoController implements Initializable {
     @FXML
     private void onAjouterRestoAction(ActionEvent event) {
         
-      /*  if(validateFieldsResto()){
+        if(validateFieldsResto()){
         int nbr = Integer.parseInt(NombredeplaceTxt.getText());
         Resto c = new Resto(nomTxt.getText(), descriptionTxt.getText(), AdresseTxt.getText(), NombredeplaceTxt);
-        ChauffeurService sc = new ChauffeurService();
-        sc.ajouter(c);*/
+        RestoService sc = new RestoService();
+       // sc.ajouter(c);
         /**
          * refreshing the table view *
          */
-       /* list.clear();
+        /*list.clear();
         list = FXCollections.observableArrayList(
                 sc.afficher()
         );
-        tableChauffeur.setItems(list);
-        tableChauffeurBus.setItems(list); */
+        tableRestaurant.setItems(list);
+        tableRestaurant.setItems(list); */
         }
     
-
+    }
     @FXML
     private void onSupprimerRestoAction(ActionEvent event) {
     }
