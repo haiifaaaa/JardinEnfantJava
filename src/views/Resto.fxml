@@ -117,18 +117,20 @@
                               <Font name="Arial Rounded MT Bold" size="19.0" />
                            </font>
                         </Label>
-                        <TableView fx:id="tablePlat1" layoutX="63.0" layoutY="94.0" prefHeight="627.0" prefWidth="876.0">
+                        <TableView fx:id="tablePlat1" layoutX="20.0" layoutY="94.0" prefHeight="627.0" prefWidth="929.0">
                            <columns>
-                              <TableColumn fx:id="num" prefWidth="122.0" text="Num" />
-                              <TableColumn fx:id="objet" prefWidth="162.0" text="Objet" />
-                              <TableColumn fx:id="type" prefWidth="140.0" text="Type" />
-                              <TableColumn fx:id="description" prefWidth="263.0" text="Description" />
-                              <TableColumn fx:id="statut" prefWidth="188.0" text="Statut" />
+                              <TableColumn fx:id="numTxt" prefWidth="76.0" text="Num" />
+                              <TableColumn fx:id="objetTxt" prefWidth="143.0" text="Objet" />
+                              <TableColumn fx:id="categorieTxt" prefWidth="142.0" text="Catégorie" />
+                              <TableColumn fx:id="messageTxt" prefWidth="216.0" text="Message" />
+                              <TableColumn fx:id="emailTxt" prefWidth="179.0" text="Email" />
+                              <TableColumn fx:id="dateTxt" prefWidth="173.0" text="Date" />
+                              <TableColumn fx:id="statutTxt" prefWidth="440.0" text="Statut" />
                            </columns>
                         </TableView>
-                        <JFXButton buttonType="RAISED" layoutX="192.0" layoutY="735.0" onAction="#onModifierPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #197976;" text="Modifier" textFill="WHITE" />
-                        <JFXButton buttonType="RAISED" layoutX="325.0" layoutY="735.0" onAction="#onSupprimerPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #1949;" text="Supprimer" textFill="WHITE" />
-                        <JFXButton buttonType="RAISED" layoutX="62.0" layoutY="735.0" onAction="#onAjouterPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #d036b4;" text="Ajouter" textFill="WHITE" />
+                        <JFXButton buttonType="RAISED" layoutX="192.0" layoutY="742.0" onAction="#onModifierPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #197976;" text="Modifier" textFill="WHITE" />
+                        <JFXButton buttonType="RAISED" layoutX="325.0" layoutY="741.0" onAction="#onSupprimerPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #1949;" text="Supprimer" textFill="WHITE" />
+                        <JFXButton buttonType="RAISED" layoutX="62.0" layoutY="741.0" onAction="#onAjouterPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #d036b4;" text="Ajouter" textFill="WHITE" />
                      </children>
                   </AnchorPane>
                </content>

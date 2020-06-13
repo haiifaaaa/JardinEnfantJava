@@ -124,14 +124,6 @@ public class RestoController implements Initializable {
     private JFXTextField search1;
     @FXML
     private TableView<?> tablePlat1;
-    @FXML
-    private TableColumn<?, ?> num;
-    @FXML
-    private TableColumn<?, ?> objet;
-    @FXML
-    private TableColumn<?, ?> type;
-    @FXML
-    private TableColumn<?, ?> statut;
     
     @FXML
     private JFXTextField searchplat;
@@ -148,6 +140,20 @@ public class RestoController implements Initializable {
     @FXML
     private JFXTextField marquePTxt;
     private JFXTextField idTxt;
+    @FXML
+    private TableColumn<?, ?> numTxt;
+    @FXML
+    private TableColumn<?, ?> objetTxt;
+    @FXML
+    private TableColumn<?, ?> categorieTxt;
+    @FXML
+    private TableColumn<?, ?> messageTxt;
+    @FXML
+    private TableColumn<?, ?> emailTxt;
+    @FXML
+    private TableColumn<?, ?> dateTxt;
+    @FXML
+    private TableColumn<?, ?> statutTxt;
 
     /**
      * Initializes the controller class.
