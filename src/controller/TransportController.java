@@ -256,6 +256,7 @@ public class TransportController implements Initializable {
         tableBus.setItems(listBus);
         tableLigne.setItems(listLigne);
         tableBusLigne.setItems(listBus);
+        
         tableChauffeur.setRowFactory(tv -> {
             TableRow<Chauffeur> row = new TableRow<>();
             row.setOnMouseClicked(event -> {

@@ -25,7 +25,6 @@
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="947.0">
                      <children>
                         <JFXTextField fx:id="nomTxt" focusColor="#556eb9" labelFloat="true" layoutX="73.0" layoutY="250.0" prefHeight="30.0" prefWidth="201.0" promptText="Nom" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="idTxt" focusColor="#556eb9" labelFloat="true" layoutX="73.0" layoutY="193.0" prefHeight="30.0" prefWidth="201.0" promptText="ID" unFocusColor="#c332a8" />
                         <JFXTextField fx:id="descriptionTxt" focusColor="#556eb9" labelFloat="true" layoutX="73.0" layoutY="308.0" prefHeight="30.0" prefWidth="201.0" promptText="Description" unFocusColor="#c332a8" />
                         <JFXTextField fx:id="AdresseTxt" focusColor="#556eb9" labelFloat="true" layoutX="73.0" layoutY="366.0" prefHeight="30.0" prefWidth="201.0" promptText="Adresse" unFocusColor="#c332a8" />
                         <JFXTextField fx:id="search" focusColor="#556eb9" labelFloat="true" layoutX="585.0" layoutY="38.0" prefHeight="33.0" prefWidth="194.0" promptText="Search" unFocusColor="#c332a8" />
@@ -56,13 +55,13 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="970.0">
                      <children>
-                        <JFXTextField fx:id="search" focusColor="#556eb9" labelFloat="true" layoutX="295.0" layoutY="346.0" promptText="Search Plat" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="nomTxt" focusColor="#556eb9" labelFloat="true" layoutX="41.0" layoutY="423.0" promptText="Nom" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="descriptionTxt" focusColor="#556eb9" labelFloat="true" layoutX="231.0" layoutY="423.0" promptText="Description" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="prixTxt" focusColor="#556eb9" labelFloat="true" layoutX="231.0" layoutY="512.0" promptText="Prix" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="searchplat" focusColor="#556eb9" labelFloat="true" layoutX="295.0" layoutY="346.0" promptText="Search Plat" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="nomPTxt" focusColor="#556eb9" labelFloat="true" layoutX="41.0" layoutY="423.0" promptText="Nom" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="descriptionPTxt" focusColor="#556eb9" labelFloat="true" layoutX="231.0" layoutY="423.0" promptText="Description" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="prixPTxt" focusColor="#556eb9" labelFloat="true" layoutX="231.0" layoutY="512.0" promptText="Prix" unFocusColor="#c332a8" />
                         <Group layoutX="228.0" layoutY="410.0" />
-                        <JFXTextField fx:id="categorieTxt" focusColor="#556eb9" labelFloat="true" layoutX="143.0" layoutY="582.0" promptText="Catégorie" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="NbdeplaceTxt" alignment="TOP_LEFT" cache="true" focusColor="#556eb9" labelFloat="true" layoutX="231.0" layoutY="237.0" promptText="Search Restaurant" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="categoriePTxt" focusColor="#556eb9" labelFloat="true" layoutX="143.0" layoutY="582.0" promptText="Catégorie" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="searchresto" alignment="TOP_LEFT" cache="true" focusColor="#556eb9" labelFloat="true" layoutX="231.0" layoutY="237.0" promptText="Search Restaurant" unFocusColor="#c332a8" />
                         <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="770.0">
                            <image>
                               <Image url="@../../../../../../../Restaurant/Hello-Sunshine.gif" />
@@ -100,7 +99,7 @@
                         <JFXButton buttonType="RAISED" layoutX="325.0" layoutY="735.0" onAction="#onSupprimerPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #1949;" text="Supprimer" textFill="WHITE" />
                         <JFXButton buttonType="RAISED" layoutX="62.0" layoutY="735.0" onAction="#onAjouterPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #d036b4;" text="Ajouter" textFill="WHITE" />
                         <DatePicker fx:id="datedebut" editable="false" layoutX="43.0" layoutY="653.0" prefHeight="26.0" prefWidth="149.0" promptText="Date de Début" />
-                        <JFXTextField fx:id="marqueTxt" focusColor="#556eb9" labelFloat="true" layoutX="44.0" layoutY="512.0" promptText="Image" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="marquePTxt" focusColor="#556eb9" labelFloat="true" layoutX="44.0" layoutY="512.0" promptText="Image" unFocusColor="#c332a8" />
                         <FontAwesomeIcon fill="#c332a8" iconName="SEARCH" layoutX="354.0" layoutY="255.0" size="2em" text="" wrappingWidth="1.0" />
                      </children>
                   </AnchorPane>
