@@ -23,7 +23,15 @@ public class Resto {
         this.adresse = adresse;
         this.nbrdeplace = nbrdeplace;
     }
-
+ 
+    public Resto( String nom, String description, String adresse, int nbrdeplace) {
+       
+        this.nom = nom;
+        this.description = description;
+        this.adresse = adresse;
+        this.nbrdeplace = nbrdeplace;
+    }
+    
     public int getId() {
         return id;
     }

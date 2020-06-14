@@ -7,7 +7,7 @@ package services;
 import java.util.List;
 /**
  *
- * @author yosra
+ * @author Haïfa
  * @param <T>
  */
 public interface IService<T> {

@@ -7,6 +7,7 @@
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -23,22 +24,22 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="947.0">
                      <children>
-                        <JFXTextField fx:id="nomTxt" focusColor="#556eb9" labelFloat="true" layoutX="44.0" layoutY="135.0" prefHeight="30.0" prefWidth="201.0" promptText="Nom" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="descriptionTxt" focusColor="#556eb9" labelFloat="true" layoutX="134.0" layoutY="207.0" prefHeight="30.0" prefWidth="201.0" promptText="Description" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="AdresseTxt" focusColor="#556eb9" labelFloat="true" layoutX="14.0" layoutY="262.0" prefHeight="30.0" prefWidth="201.0" promptText="Adresse" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="nomTxt" focusColor="#556eb9" labelFloat="true" layoutX="73.0" layoutY="250.0" prefHeight="30.0" prefWidth="201.0" promptText="Nom" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="descriptionTxt" focusColor="#556eb9" labelFloat="true" layoutX="73.0" layoutY="308.0" prefHeight="30.0" prefWidth="201.0" promptText="Description" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="AdresseTxt" focusColor="#556eb9" labelFloat="true" layoutX="73.0" layoutY="366.0" prefHeight="30.0" prefWidth="201.0" promptText="Adresse" unFocusColor="#c332a8" />
                         <JFXTextField fx:id="search" focusColor="#556eb9" labelFloat="true" layoutX="585.0" layoutY="38.0" prefHeight="33.0" prefWidth="194.0" promptText="Search" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="NombredeplaceTxt" focusColor="#556eb9" labelFloat="true" layoutX="128.0" layoutY="334.0" prefHeight="30.0" prefWidth="201.0" promptText="Nombre de place " unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="NombredeplaceTxt" focusColor="#556eb9" labelFloat="true" layoutX="73.0" layoutY="419.0" prefHeight="30.0" prefWidth="201.0" promptText="Nombre de place " unFocusColor="#c332a8" />
                         <FontAwesomeIcon fill="#c332a8" iconName="SEARCH" layoutX="549.0" layoutY="62.0" size="2em" wrappingWidth="18.142857551574707" />
                         <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="549.0" onAction="#onAjouterRestoAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #d036b4;" text="Ajouter" textFill="WHITE" />
                         <JFXButton buttonType="RAISED" layoutX="360.0" layoutY="689.0" onAction="#onSupprimerRestoAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="#652828" style="-fx-background-color: #1949;" text="Supprimer" textFill="WHITE" />
                         <JFXButton buttonType="RAISED" layoutX="215.0" layoutY="620.0" onAction="#onModifierAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="#9a2626" style="-fx-background-color: #197976;" text="Modifier" textFill="WHITE" />
                         <TableView fx:id="tableRestaurant" layoutX="392.0" layoutY="108.0" prefHeight="436.0" prefWidth="547.0">
                            <columns>
-                              <TableColumn fx:id="Prix1" prefWidth="87.0" text="ID" />
+                              <TableColumn fx:id="id" prefWidth="87.0" text="ID" />
                               <TableColumn fx:id="nom" prefWidth="85.0" text="Nom" />
-                              <TableColumn fx:id="prenom" prefWidth="160.0" text="Description" />
-                              <TableColumn fx:id="cin" prefWidth="110.0" text="Adresse" />
-                              <TableColumn fx:id="Prix" prefWidth="104.0" text="Nombre de place" />
+                              <TableColumn fx:id="description" prefWidth="160.0" text="Description" />
+                              <TableColumn fx:id="adresse" prefWidth="110.0" text="Adresse" />
+                              <TableColumn fx:id="nbplace" prefWidth="104.0" text="Nombre de place" />
                            </columns>
                         </TableView>
                         <ImageView fitHeight="278.0" fitWidth="410.0" layoutX="558.0" layoutY="536.0">
@@ -54,31 +55,32 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="970.0">
                      <children>
-                        <JFXTextField fx:id="search" focusColor="#556eb9" labelFloat="true" layoutX="576.0" layoutY="317.0" promptText="Search Plat" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="nomTxt" focusColor="#556eb9" labelFloat="true" layoutX="41.0" layoutY="397.0" promptText="Nom" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="descriptionTxt" focusColor="#556eb9" labelFloat="true" layoutX="41.0" layoutY="475.0" promptText="Description" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="prixTxt" focusColor="#556eb9" labelFloat="true" layoutX="208.0" layoutY="449.0" promptText="Prix" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="searchplat" focusColor="#556eb9" labelFloat="true" layoutX="295.0" layoutY="346.0" promptText="Search Plat" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="nomPTxt" focusColor="#556eb9" labelFloat="true" layoutX="41.0" layoutY="423.0" promptText="Nom" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="descriptionPTxt" focusColor="#556eb9" labelFloat="true" layoutX="231.0" layoutY="423.0" promptText="Description" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="prixPTxt" focusColor="#556eb9" labelFloat="true" layoutX="231.0" layoutY="512.0" promptText="Prix" unFocusColor="#c332a8" />
                         <Group layoutX="228.0" layoutY="410.0" />
-                        <JFXTextField fx:id="categorieTxt" focusColor="#556eb9" labelFloat="true" layoutX="44.0" layoutY="575.0" promptText="Catégorie" unFocusColor="#c332a8" />
-                        <JFXTextField fx:id="NbdeplaceTxt" alignment="TOP_LEFT" cache="true" focusColor="#556eb9" labelFloat="true" layoutX="75.0" layoutY="255.0" promptText="Search Restaurant" unFocusColor="#c332a8" />
-                        <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="335.0" layoutY="159.0">
+                        <JFXTextField fx:id="categoriePTxt" focusColor="#556eb9" labelFloat="true" layoutX="143.0" layoutY="582.0" promptText="Catégorie" unFocusColor="#c332a8" />
+                        <JFXTextField fx:id="searchresto" alignment="TOP_LEFT" cache="true" focusColor="#556eb9" labelFloat="true" layoutX="231.0" layoutY="237.0" promptText="Search Restaurant" unFocusColor="#c332a8" />
+                        <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="770.0">
                            <image>
                               <Image url="@../../../../../../../Restaurant/Hello-Sunshine.gif" />
                            </image>
                         </ImageView>
-                        <FontAwesomeIcon fill="#c332a8" iconName="SEARCH" layoutX="735.0" layoutY="339.0" size="2em" text="" wrappingWidth="12.142857551574707" />
-                        <Label layoutX="469.0" layoutY="118.0" prefHeight="29.0" prefWidth="278.0" text="Selectionner Un restaurant">
+                        <FontAwesomeIcon fill="#c332a8" iconName="SEARCH" layoutX="416.0" layoutY="364.0" size="2em" text="" wrappingWidth="12.142857551574707" />
+                        <Label layoutX="92.0" layoutY="86.0" prefHeight="29.0" prefWidth="278.0" text="Selectionner Un restaurant">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="19.0" />
                            </font>
                         </Label>
-                        <Label layoutX="69.0" layoutY="325.0" prefHeight="30.0" prefWidth="278.0" text="Ajouter Un Plat">
+                        <Label layoutX="44.0" layoutY="344.0" prefHeight="30.0" prefWidth="278.0" text="Ajouter Un Plat">
                            <font>
                               <Font name="Arial Rounded MT Bold" size="19.0" />
                            </font>
                         </Label>
                         <DatePicker fx:id="datefin" editable="false" layoutX="233.0" layoutY="653.0" prefHeight="26.0" prefWidth="147.0" promptText="Date de Fin" />
-                        <TableView fx:id="tableResto" layoutX="50.0" layoutY="23.0" prefHeight="219.0" prefWidth="337.0">
+                        <Separator layoutX="6.0" layoutY="310.0" prefHeight="12.0" prefWidth="963.0" />
+                        <TableView fx:id="tableResto" layoutX="447.0" layoutY="30.0" prefHeight="219.0" prefWidth="337.0">
                            <columns>
                               <TableColumn fx:id="nomR" prefWidth="162.0" text="nom" />
                               <TableColumn fx:id="AdresseR" prefWidth="174.0" text="Adresse" />
@@ -87,18 +89,46 @@
                         <TableView fx:id="tablePlat" layoutX="446.0" layoutY="372.0" prefHeight="405.0" prefWidth="505.0">
                            <columns>
                               <TableColumn fx:id="nomP" prefWidth="73.0" text="Nom" />
-                              <TableColumn fx:id="descriptionP" prefWidth="98.0" text="Description" />
-                              <TableColumn fx:id="catégorieP" prefWidth="86.0" text="Catégorie" />
-                              <TableColumn fx:id="prixP" prefWidth="71.0" text="Prix" />
-                              <TableColumn fx:id="imageP" prefWidth="84.0" text="Image" />
+                              <TableColumn fx:id="descriptionP" prefWidth="130.0" text="Description" />
+                              <TableColumn fx:id="catégorieP" prefWidth="108.0" text="Catégorie" />
+                              <TableColumn fx:id="prixP" prefWidth="77.0" text="Prix" />
+                              <TableColumn fx:id="imageP" prefWidth="116.0" text="Image" />
                            </columns>
                         </TableView>
                         <JFXButton buttonType="RAISED" layoutX="192.0" layoutY="735.0" onAction="#onModifierPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #197976;" text="Modifier" textFill="WHITE" />
                         <JFXButton buttonType="RAISED" layoutX="325.0" layoutY="735.0" onAction="#onSupprimerPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #1949;" text="Supprimer" textFill="WHITE" />
                         <JFXButton buttonType="RAISED" layoutX="62.0" layoutY="735.0" onAction="#onAjouterPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #d036b4;" text="Ajouter" textFill="WHITE" />
                         <DatePicker fx:id="datedebut" editable="false" layoutX="43.0" layoutY="653.0" prefHeight="26.0" prefWidth="149.0" promptText="Date de Début" />
-                        <JFXTextField fx:id="marqueTxt" focusColor="#556eb9" labelFloat="true" layoutX="219.0" layoutY="525.0" promptText="Image" unFocusColor="#c332a8" />
-                        <FontAwesomeIcon fill="#c332a8" iconName="SEARCH" layoutX="241.0" layoutY="282.0" size="2em" text="" wrappingWidth="12.142857551574707" />
+                        <JFXTextField fx:id="marquePTxt" focusColor="#556eb9" labelFloat="true" layoutX="44.0" layoutY="512.0" promptText="Image" unFocusColor="#c332a8" />
+                        <FontAwesomeIcon fill="#c332a8" iconName="SEARCH" layoutX="354.0" layoutY="255.0" size="2em" text="" wrappingWidth="1.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Reclamation">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="970.0">
+                     <children>
+                        <JFXTextField fx:id="search1" focusColor="#556eb9" labelFloat="true" layoutX="635.0" layoutY="32.0" promptText="Search Plat" unFocusColor="#c332a8" />
+                        <Group layoutX="228.0" layoutY="410.0" />
+                        <FontAwesomeIcon fill="#c332a8" iconName="SEARCH" layoutX="787.0" layoutY="54.0" size="2em" text="" wrappingWidth="12.142857551574707" />
+                        <Label layoutX="53.0" layoutY="30.0" prefHeight="30.0" prefWidth="278.0" text="Liste des Réclamation">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tablePlat1" layoutX="63.0" layoutY="94.0" prefHeight="627.0" prefWidth="876.0">
+                           <columns>
+                              <TableColumn fx:id="num" prefWidth="122.0" text="Num" />
+                              <TableColumn fx:id="objet" prefWidth="162.0" text="Objet" />
+                              <TableColumn fx:id="type" prefWidth="140.0" text="Type" />
+                              <TableColumn fx:id="description" prefWidth="263.0" text="Description" />
+                              <TableColumn fx:id="statut" prefWidth="188.0" text="Statut" />
+                           </columns>
+                        </TableView>
+                        <JFXButton buttonType="RAISED" layoutX="192.0" layoutY="735.0" onAction="#onModifierPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #197976;" text="Modifier" textFill="WHITE" />
+                        <JFXButton buttonType="RAISED" layoutX="325.0" layoutY="735.0" onAction="#onSupprimerPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #1949;" text="Supprimer" textFill="WHITE" />
+                        <JFXButton buttonType="RAISED" layoutX="62.0" layoutY="735.0" onAction="#onAjouterPlatAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #d036b4;" text="Ajouter" textFill="WHITE" />
                      </children>
                   </AnchorPane>
                </content>
