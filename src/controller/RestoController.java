@@ -11,6 +11,7 @@ import entities.Resto;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -23,6 +24,7 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 import services.ChauffeurService;
+import services.RestoService;
 
 /**
  * FXML Controller class
@@ -42,7 +44,7 @@ public class RestoController implements Initializable {
     @FXML
     private JFXTextField NombredeplaceTxt;
     @FXML
-    private TableView<?> tableRestaurant;
+    private TableView<Resto> tableRestaurant;
     @FXML
     private TableColumn<?, ?> nom;
     @FXML
@@ -85,9 +87,15 @@ public class RestoController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    RestoService ps = new RestoService();
+    public ObservableList<Resto> observablelistResto = FXCollections.observableArrayList(
+            ps.afficher()
+    );
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        tableRestaurant.setItems(observablelistResto);
     }    
 
      public void showNotif(){
