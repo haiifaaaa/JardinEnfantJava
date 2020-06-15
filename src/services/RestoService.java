@@ -1,92 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package services;
 
-
-
+import entities.Chauffeur;
 import entities.Resto;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import util.DataSource;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import util.DataSource;
 
-
-
-
-/**
- *
- * @author Haifa
- */
-public class RestoService {
+public class RestoService implements IService<Resto> {
     Connection cnx = DataSource.getInstance().getCnx();
-    
 
-    public void ajouter(Resto c) {
+    @Override
+    public void ajouter(Resto resto) {
 
         try {
-            String requete = "INSERT INTO resto (nom,description,adress,nbplace) VALUES (?,?,?,?)";
+            String requete = "INSERT INTO resto(nom,description,adress,img,nbplace) VALUES (?,?,?,?,?)";
             PreparedStatement pst = cnx.prepareStatement(requete);
 
-            //pst.setInt(1, c.getId());
-            pst.setString(2, c.getNom());
-            pst.setString(3, c.getDescription());
-            pst.setString(4, c.getAdresse());
-            pst.setInt(5, c.getNbrdeplace());
+            pst.setString(1, resto.getNom());
+            pst.setString(2, resto.getDescription());
+            pst.setString(3, resto.getAdresse());
+            pst.setString(4, "TODO: GESTION import IMAGE COTE JAVAFX");
+            pst.setInt(5, resto.getNbrdeplace());
             pst.executeUpdate();
             System.out.println("Restaurant ajouté !");
 
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         }
-
     }
-    
 
-
- 
-    public void supprimer(Resto c) {
-        try {
-            String requete = "DELETE FROM resto WHERE id=?";
-            PreparedStatement pst = cnx.prepareStatement(requete);
-            pst.setInt(1, c.getId());
-            pst.executeUpdate();
-            System.out.println("Restaurant supprimé !");
-
-        } catch (SQLException ex) {
-            System.err.println(ex.getMessage());
-        }
+    @Override
+    public void supprimer(Resto resto) {
 
     }
 
-   
-    public void modifier(Resto c) {
-        try {
-            String requete;
-            requete = "UPDATE resto SET nom=?,description=? ,adress=? WHERE id=?";
-            PreparedStatement pst = cnx.prepareStatement(requete);
-            pst.setInt(1, c.getId());
-            pst.setString(2, c.getNom());
-            pst.setString(3, c.getDescription());
-            pst.setString(4, c.getAdresse());
-            pst.setInt(5, c.getNbrdeplace());
-            pst.executeUpdate();
-            System.out.println("restaurant modifié !");
-
-        } catch (SQLException ex) {
-            System.err.println(ex.getMessage());
-        }
+    @Override
+    public void modifier(Resto resto) {
 
     }
 
+    @Override
     public List<Resto> afficher() {
         List<Resto> list = new ArrayList<>();
 
@@ -96,7 +54,8 @@ public class RestoService {
             ResultSet rs = pst.executeQuery();
             System.out.println(rs);
             while (rs.next()) {
-                list.add(new Resto( rs.getString(1),rs.getString(2), rs.getString(3), rs.getInt(4)));
+                list.add(new Resto(rs.getInt(1), rs.getString(2), rs.getString(3),
+                                    rs.getString(4), rs.getInt(6)));
             }
 
         } catch (SQLException ex) {
@@ -104,6 +63,5 @@ public class RestoService {
         }
 
         return list;
-
     }
 }
