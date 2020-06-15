@@ -14,6 +14,7 @@ public class Resto {
     private String nom;
     private String description;
     private String adresse;
+    //private String img;
     private int nbrdeplace;
 
     public Resto(int id, String nom, String description, String adresse, int nbrdeplace) {
@@ -31,7 +32,8 @@ public class Resto {
         this.adresse = adresse;
         this.nbrdeplace = nbrdeplace;
     }
-    
+
+
     public int getId() {
         return id;
     }
@@ -47,6 +49,7 @@ public class Resto {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
 
     public String getDescription() {
         return description;

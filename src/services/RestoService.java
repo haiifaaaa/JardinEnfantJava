@@ -17,6 +17,21 @@ public class RestoService implements IService<Resto> {
     @Override
     public void ajouter(Resto resto) {
 
+        try {
+            String requete = "INSERT INTO resto(nom,description,adress,img,nbplace) VALUES (?,?,?,?,?)";
+            PreparedStatement pst = cnx.prepareStatement(requete);
+
+            pst.setString(1, resto.getNom());
+            pst.setString(2, resto.getDescription());
+            pst.setString(3, resto.getAdresse());
+            pst.setString(4, "TODO: GESTION import IMAGE COTE JAVAFX");
+            pst.setInt(5, resto.getNbrdeplace());
+            pst.executeUpdate();
+            System.out.println("Restaurant ajouté !");
+
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
     }
 
     @Override
@@ -40,7 +55,7 @@ public class RestoService implements IService<Resto> {
             System.out.println(rs);
             while (rs.next()) {
                 list.add(new Resto(rs.getInt(1), rs.getString(2), rs.getString(3),
-                                    rs.getString(4),rs.getInt(4)));
+                                    rs.getString(4), rs.getInt(6)));
             }
 
         } catch (SQLException ex) {

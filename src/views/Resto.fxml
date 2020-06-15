@@ -33,12 +33,12 @@
                         <JFXButton buttonType="RAISED" layoutX="73.0" layoutY="549.0" onAction="#onAjouterRestoAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #d036b4;" text="Ajouter" textFill="WHITE" />
                         <JFXButton buttonType="RAISED" layoutX="360.0" layoutY="689.0" onAction="#onSupprimerRestoAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="#652828" style="-fx-background-color: #1949;" text="Supprimer" textFill="WHITE" />
                         <JFXButton buttonType="RAISED" layoutX="215.0" layoutY="620.0" onAction="#onModifierAction" prefHeight="42.0" prefWidth="110.0" ripplerFill="#9a2626" style="-fx-background-color: #197976;" text="Modifier" textFill="WHITE" />
-                        <TableView fx:id="tableRestaurant" layoutX="392.0" layoutY="108.0" prefHeight="436.0" prefWidth="547.0">
+                        <TableView fx:id="tableRestaurant" layoutX="300.0" layoutY="108.0" prefHeight="436.0" prefWidth="500.0">
                            <columns>
-                              <TableColumn fx:id="id" prefWidth="87.0" text="ID" />
-                              <TableColumn fx:id="nom" prefWidth="85.0" text="Nom" />
-                              <TableColumn fx:id="description" prefWidth="160.0" text="Description" />
-                              <TableColumn fx:id="adresse" prefWidth="110.0" text="Adresse" />
+                              <TableColumn fx:id="idResto" prefWidth="87.0" text="ID" />
+                              <TableColumn fx:id="nomResto" prefWidth="85.0" text="Nom" />
+                              <TableColumn fx:id="descriptionResto" prefWidth="160.0" text="Description" />
+                              <TableColumn fx:id="adresseResto" prefWidth="110.0" text="Adresse" />
                               <TableColumn fx:id="nbplace" prefWidth="104.0" text="Nombre de place" />
                            </columns>
                         </TableView>
