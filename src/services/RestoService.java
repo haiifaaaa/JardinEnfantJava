@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RestoService implements IService<Resto> {
+
     Connection cnx = DataSource.getInstance().getCnx();
 
     @Override
@@ -39,9 +40,36 @@ public class RestoService implements IService<Resto> {
 
     }
 
+    public void supprimer(int id) {
+        try {
+            String requete = "DELETE from resto WHERE id=?";
+            PreparedStatement pst = cnx.prepareStatement(requete);
+            pst.setInt(1, id);
+            pst.executeUpdate();
+            System.out.println("Restaurant ajouté !");
+
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+    }
+
     @Override
     public void modifier(Resto resto) {
+        try {
+            String requete = "UPDATE resto SET nom=? ,description=? ,adress=? ,nbplace=? where id=?";
+            PreparedStatement pst = cnx.prepareStatement(requete);
 
+            pst.setString(1, resto.getNom());
+            pst.setString(2, resto.getDescription());
+            pst.setString(3, resto.getAdresse());
+            pst.setInt(4, resto.getNbrdeplace());
+            pst.setInt(5, resto.getId());
+            pst.executeUpdate();
+            System.out.println("Restaurant ajouté !");
+
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
     }
 
     @Override
@@ -55,7 +83,7 @@ public class RestoService implements IService<Resto> {
             System.out.println(rs);
             while (rs.next()) {
                 list.add(new Resto(rs.getInt(1), rs.getString(2), rs.getString(3),
-                                    rs.getString(4), rs.getInt(6)));
+                        rs.getString(4), rs.getInt(6)));
             }
 
         } catch (SQLException ex) {

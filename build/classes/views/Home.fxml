@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -21,6 +23,21 @@
                   <Font name="System Bold" size="17.0" />
                </font></JFXButton>
             <JFXButton fx:id="btnRestoHome" buttonType="RAISED" layoutX="-1.0" layoutY="278.0" onAction="#pageresto" prefHeight="66.0" prefWidth="263.0" ripplerFill="#d388cc" style="-fx-background-color: white;" text="Restaurant">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <HBox fx:id="hblogout" layoutX="42.0" layoutY="49.0" prefHeight="44.0" prefWidth="206.0">
+               <children>
+                  <Label fx:id="lnUsername" prefHeight="44.0" prefWidth="187.0" />
+                  <JFXButton fx:id="btnlogout" buttonType="RAISED" onAction="#logout" prefHeight="26.0" prefWidth="86.0" ripplerFill="#d388cc" style="-fx-background-color: white;" text="logout">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="73.0" layoutY="101.0" onAction="#login" prefHeight="52.0" prefWidth="86.0" ripplerFill="#d388cc" style="-fx-background-color: white;" text="Login">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>

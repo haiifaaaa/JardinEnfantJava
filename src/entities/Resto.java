@@ -14,8 +14,9 @@ public class Resto {
     private String nom;
     private String description;
     private String adresse;
-    //private String img;
+    private String img;
     private int nbrdeplace;
+    
 
     public Resto(int id, String nom, String description, String adresse, int nbrdeplace) {
         this.id = id;

@@ -8,10 +8,11 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="JardinEnfantJava.jar" size="7568998" download="eager" />
+    <jar href="JardinEnfantJava.jar" size="7620742" download="eager" />
     <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
     <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
     <jar href="lib\fontawesomefx-8.1.jar" size="179086" download="eager" />
+    <jar href="lib\jBCrypt-0.4.jar" size="16960" download="eager" />
     <jar href="lib\javax.mail-api-1.4.7.jar" size="189526" download="eager" />
     <jar href="lib\javax.mail.jar" size="434923" download="eager" />
     <jar href="lib\jfoenix-1.4.0.jar" size="2363143" download="eager" />
